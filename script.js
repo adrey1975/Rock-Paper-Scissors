@@ -12,7 +12,7 @@ function playerChoice() {
     let player = prompt('Choose your weapon: ').toLowerCase();
     return player;
 }
-
+console.log(playerChoice());
 //---------------------------------------------
 
 
