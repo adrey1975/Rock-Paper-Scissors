@@ -49,12 +49,6 @@ function determineWinner(playerChoice, computerPlay) {
         }
     }
 }
-    // function newFunction() {
-    //     var pScore = 0;
-    //     var cScore = 0;
-    //     return { pScore, cScore };
-    //}
-
 //---------------------------------------------
 function playGame() {
 
@@ -63,13 +57,13 @@ function playGame() {
 
     console.log('You chose: ' + userChoice);
     console.log('Computer chose: ' + cpuChoice);
-    console.log(pScore, cScore);
     console.log(determineWinner(userChoice, cpuChoice));
+    console.log('PLAYER: ' + pScore, 'COMPUTER: ' + cScore);
 }
 //---------------------------------------------
 function finalWinner() {
     if(pScore>cScore) {
-        alert("After 3 rounds, you are the final champion! congrats!");
+        alert("After 5 rounds, you are the final champion! congrats!");
     } else if (pScore<cScore) {
         alert("You lose! Computers are the superior beings!");
     } else {
@@ -79,11 +73,22 @@ function finalWinner() {
 }
 //---------------------------------------------
 function rounds() {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         playGame(i);
     }
-    finalWinner()
+    finalWinner();
+    playAgain();
 }
+//---------------------------------------------
+function playAgain() { 
+    let play = prompt("Would you like to play again? Enter Y or N: ").toUpperCase();
+    if (play === "Y") {
+        rounds();
+    } else {
+        alert("Game Over!");
+    }
+}
+
 rounds();
 
 
