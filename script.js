@@ -1,12 +1,7 @@
-let pScore = 0;
-let cScore = 0;
-
-//---------------------------------------------
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
 }
-
 //---------------------------------------------
 function playerChoice() { 
     let player = prompt('Choose your weapon: ').toLowerCase();
@@ -14,6 +9,10 @@ function playerChoice() {
 }
 //---------------------------------------------
 function determineWinner(playerChoice, computerPlay) {
+    var pScore = 0;
+    var cScore = 0;
+    console.log(pScore, cScore);
+
     if (computerPlay === playerChoice) {
         return "Tie!";
     }
@@ -43,6 +42,7 @@ function determineWinner(playerChoice, computerPlay) {
 }
 //---------------------------------------------
 function playGame() {
+
     const userChoice = playerChoice();
     const cpuChoice = computerPlay();
 
@@ -51,6 +51,11 @@ function playGame() {
 
     console.log(determineWinner(userChoice, cpuChoice));
 }
-playGame();
+function rounds() {
+    for (let i = 0; i < 3; i++) {
+        playGame(i);
+    }
+}
+rounds();
 
 
