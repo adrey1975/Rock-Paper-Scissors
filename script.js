@@ -6,7 +6,7 @@ var pScore = 0;
 // this line will display after every round played with an updated score
 document.getElementById('score').textContent = "COMPUTER: " + cScore + " PLAYER: " + pScore;
 
-// Selector that allow us to make a callback to our html buttons
+// Constant variable that allow us to make a callback to our html buttons
 const buttons = document.querySelectorAll('[data-selection]');
 
 // Function with our event listener that will take in button we select/click
