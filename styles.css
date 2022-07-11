@@ -22,6 +22,21 @@ title {
     
 }
 
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+img {
+    max-width: 12%;
+    height: auto;
+    filter: grayscale(100%);
+    
+}
+
 .btn{
     align-items: center;
     margin: .3em;
